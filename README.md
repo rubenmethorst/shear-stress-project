@@ -12,10 +12,13 @@ This repository holds all scripts used to analyze data and create figures presen
 
 
 #**Scripts**
-`CpG_Filtering.R`: used to filter CpG sites for only promoter CpG sites
-`MR IS and CDH.R`: Script to perform Mendelian randomisation on our data for ischemic stroke and coronary heart disease
-`RAP function.R`: script to make regional association plot
-`ROI script.R`: script to help build your regions of interest for mQTL analysis (QTLToolKit)
+*`CpG_Filtering.R`: used to filter CpG sites for only promoter CpG sites
+
+*`MR IS and CDH.R`: Script to perform Mendelian randomisation on our data for ischemic stroke and coronary heart disease
+
+*`RAP function.R`: script to make regional association plot
+
+*`ROI script.R`: script to help build your regions of interest for mQTL analysis (QTLToolKit)
 
 
 --------------------------

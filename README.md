@@ -1,5 +1,5 @@
 # Shear-stress-project
-Authors: Ruben Methorst, Sander van der Laan
+Authors: Ruben Methorst, Gerard Pasterkamp, Sander van der Laan
 
 This repository holds all scripts used to analyze data and create figures presented in "Exploring the Causal Inference of Shear Stress Associated DNA Methylation on Cardiovascular Risk".
 
@@ -8,10 +8,11 @@ This repository holds all scripts used to analyze data and create figures presen
 **Background and aims:** Atherosclerosis is a lipid-driven inflammatory disease presumably initiated by endothelial activation. Low vascular shear stress is known for its ability to activate endothelial cells. Differential DNA methylation (DNAm) is a relatively unexplored player in atherosclerotic disease development and endothelial dysfunction. Literature search revealed that expression of 11 genes have been found to be associated with differential DNAm due to low shear stress in endothelial cells. We hypothesized a causal relationship between DNAm of shear stress associated genes in human carotid plaque and increased risk of cardiovascular disease.
 
 **Methods:** Using Mendelian randomisation (MR) analysis, we explored the potential causal role of DNAm of shear stress associated genes on cardiovascular disease risk. We used genetic and DNAm data of 442 carotid endarterectomy derived advanced plaques from the Athero-Express Biobank Study for quantitative trait loci (QTL) discovery and performed MR analysis using these QTLs and GWAS summary statistics of coronary artery disease (CAD) and ischemic stroke (IS).
+
 **Results:** We discovered 9 methylation QTLs in plaque for shear stress associated differential DNAm. We found no significant effect of shear stress gene promotor methylation and increased risk of CAD and IS. 
 
 
-#**Scripts**
+# **Scripts**
 
 * `CpG_Filtering.R`: used to filter CpG sites for only promoter CpG sites
 

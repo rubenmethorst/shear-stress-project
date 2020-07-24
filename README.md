@@ -3,7 +3,7 @@ Authors: Ruben Methorst, Sander van der Laan
 
 This repository holds all scripts used to analyze data and create figures presented in "Exploring the Causal Inference of Shear Stress Associated DNA Methylation on Cardiovascular Risk".
 
-#**Abstract**
+# **Abstract**
 
 **Background and aims:** Atherosclerosis is a lipid-driven inflammatory disease presumably initiated by endothelial activation. Low vascular shear stress is known for its ability to activate endothelial cells. Differential DNA methylation (DNAm) is a relatively unexplored player in atherosclerotic disease development and endothelial dysfunction. Literature search revealed that expression of 11 genes have been found to be associated with differential DNAm due to low shear stress in endothelial cells. We hypothesized a causal relationship between DNAm of shear stress associated genes in human carotid plaque and increased risk of cardiovascular disease.
 
@@ -19,9 +19,9 @@ This repository holds all scripts used to analyze data and create figures presen
 
 
 --------------------------
-##**The MIT License (MIT)**
+## **The MIT License (MIT)**
 
-####Copyright (c) 1979-2020
+### Copyright (c) 1979-2020
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

@@ -85,14 +85,14 @@ myfiles = list.files(path=mydir, pattern="*.txt", full.names=TRUE)
 
 mQTLs_shear_stress_nominal_v20 = ldply(myfiles, read_csv)
 
-#TEST SOMETHING: filter out shear stress mQTLs based on CpG sites
+#filter out shear stress mQTLs based on CpG sites
 
-TEST <- mQTLs_shear_stress_nominal_v20[mQTLs_shear_stress_nominal_v20$ProbeID %in% CpGs_region[[1]], ]
+shear_stress_mQTLs <- mQTLs_shear_stress_nominal_v20[mQTLs_shear_stress_nominal_v20$ProbeID %in% CpGs_region[[1]], ]
 
-write.csv(TEST, file = "mQTLs_shear_stress_nominal_v20_filtered.csv", row.names = F)
+write.csv(shear_stress_mQTLs, file = "mQTLs_shear_stress_nominal_v20_filtered.csv", row.names = F)
 
 
-#TEST SOMETHING: filter based on CpG location
+#Manual input to verify results: filter based on CpG location
 
 HOXA5 <- subset(mQTLs_shear_stress_v19, BP_CpG > 27182665 & BP_CpG < 27185287 & Chr_CpG == "7")
 TMEM184B <- subset(mQTLs_shear_stress_v19, BP_CpG > 38668890 & BP_CpG < 38671040 & Chr_CpG == "16")
@@ -106,6 +106,6 @@ DOK4 <- subset(mQTLs_shear_stress_v19, BP_CpG > 57520217 & BP_CpG < 57522407 & C
 SPRY2 <- subset(mQTLs_shear_stress_v19, BP_CpG > 80914757 & BP_CpG < 80917086 & Chr_CpG == "13")
 ENOSF1 <- subset(mQTLs_shear_stress_v19, BP_CpG > 712504 & BP_CpG < 715676 & Chr_CpG == "18")
 
-TEST2 <- rbind(HOXA5, TMEM184B, ADAMTSL5, KLF4, KLF3, CMKLR1, PKP4, ACVRL1, DOK4, SPRY2, ENOSF1)
+TEST <- rbind(HOXA5, TMEM184B, ADAMTSL5, KLF4, KLF3, CMKLR1, PKP4, ACVRL1, DOK4, SPRY2, ENOSF1)
 
 #same results

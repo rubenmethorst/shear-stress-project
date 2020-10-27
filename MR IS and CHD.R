@@ -7,8 +7,6 @@ library(MRInstruments)
 library(ggplot2)
 
 #read mQTL data
-#mQTLs_shear_stress <- read_csv("~/Documents/Studie/Major/Artikel Scriptie/DATA/v19 mQTLs/mQTLs_shear_stress_v19_filtered_Illumina_v2.csv") #mac
-
 mQTLs_shear_stress <- read_csv("~/Genetics/Artikel Scriptie/DATA/v19 mQTLs/mQTLs_shear_stress_v19_filtered_Illumina_v2.csv") #windows
 
 #unify RS-identifiers for mQTL data
@@ -32,7 +30,7 @@ head(gwas_catalog)
 
 #read mQTL data as MR
 
-#write.csv(mQTLs_shear_stress, file = "mQTLs_shear_stress_v19_input.csv", row.names = F)
+write.csv(mQTLs_shear_stress, file = "mQTLs_shear_stress_v19_input.csv", row.names = F)
 
 mQTL_exposure_data <- read_exposure_data(
   filename = "mQTLs_shear_stress_v19_input.csv",
@@ -59,7 +57,7 @@ mQTL_exposure_data_clumped <- clump_data(mQTL_exposure_data)
 #extract outcome data
 
 out_dat_7 <- extract_outcome_data(
-  snps = mQTL_exposure_data_clumped$SNP,                  #CLUMPED OR NOT CLUMPED?
+  snps = mQTL_exposure_data_clumped$SNP,                  
   outcomes = 7,                                           #enter your MR Base outcomes here
   proxies = TRUE
 )
@@ -80,9 +78,9 @@ res_single_out_7 <- mr_singlesnp(mQTL_vs_out_7)
 
 res_pleiotropy_7 <- mr_pleiotropy_test(mQTL_vs_out_7)
 
-# write.csv(mQTL_res_out_7, file = "mQTL_res_out_7_20200210.csv", row.names = F)
-# write.csv(res_single_out_7, file = "res_single_out_7_20200210.csv", row.names = F)
-# write.csv(res_pleiotropy_7, file = "res_pleiotropy_7_20200210.csv", row.names = F)
+write.csv(mQTL_res_out_7, file = "mQTL_res_out_7_20200210.csv", row.names = F)
+write.csv(res_single_out_7, file = "res_single_out_7_20200210.csv", row.names = F)
+write.csv(res_pleiotropy_7, file = "res_pleiotropy_7_20200210.csv", row.names = F)
 
 #PLOTS
 
@@ -117,8 +115,8 @@ mQTL_exposure_data_clumped <- clump_data(mQTL_exposure_data)
 #extract outcome data
 
 out_dat_1108 <- extract_outcome_data(
-  snps = mQTL_exposure_data_clumped$SNP,                  #CLUMPED OR NOT CLUMPED?
-  outcomes = 1108,                                           #enter your MR Base outcomes here
+  snps = mQTL_exposure_data_clumped$SNP,                  
+  outcomes = 1108,                                      #enter your MR Base outcomes here
   proxies = TRUE
 )
 
@@ -138,9 +136,9 @@ res_single_out_1108 <- mr_singlesnp(mQTL_vs_out_1108)
 
 res_pleiotropy_1108 <- mr_pleiotropy_test(mQTL_vs_out_1108)
 
-# write.csv(mQTL_res_out_1108, file = "mQTL_res_out_1108_20200210.csv", row.names = F)
-# write.csv(res_single_out_1108, file = "res_single_out_1108_20200210.csv", row.names = F)
-# write.csv(res_pleiotropy_1108, file = "res_pleiotropy_1108.csv", row.names = F)
+write.csv(mQTL_res_out_1108, file = "mQTL_res_out_1108_20200210.csv", row.names = F)
+write.csv(res_single_out_1108, file = "res_single_out_1108_20200210.csv", row.names = F)
+write.csv(res_pleiotropy_1108, file = "res_pleiotropy_1108.csv", row.names = F)
 
 #PLOTS
 
@@ -158,7 +156,6 @@ PLOT_1108 <- PLOT_1108[["7GOYOu.1108"]] + #COPY THE ID FROM THE MR TABLE!
   labs(x = "SNP effect on DNA methylation") + 
   labs(y = "SNP effect on Stroke") +
   scale_color_manual(values=c("#5EB17F","#F59D10","#E55738","#8D5B9A","#E35493"))
-# + etc.
 
 PLOT_1108
 

@@ -54,6 +54,15 @@ mQTL_exposure_data$exposure <- "DNAm"
 
 mQTL_exposure_data_clumped <- clump_data(mQTL_exposure_data)
 
+#calculate F-statistic
+MR_F_stat <- mQTL_exposure_data_clumped
+
+B <- abs(MR_F_stat$beta.exposure)
+seBeta <- MR_F_stat$se.exposure
+
+F   = B^2/seBeta^2
+print(F)
+
 #extract outcome data
 
 out_dat_7 <- extract_outcome_data(
